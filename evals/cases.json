@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "id": "nrr-basic",
+      "metric": "nrr",
+      "input": {
+        "beginningMrr": 100000,
+        "expansionMrr": 10000,
+        "contractionMrr": 5000,
+        "churnedMrr": 10000
+      },
+      "expected": {
+        "nrrPct": 95
+      }
+    },
+    {
+      "id": "grr-excludes-expansion",
+      "metric": "grr",
+      "input": {
+        "beginningMrr": 100000,
+        "contractionMrr": 5000,
+        "churnedMrr": 10000
+      },
+      "expected": {
+        "grrPct": 85
+      }
+    },
+    {
+      "id": "runway-basic",
+      "metric": "runway",
+      "input": {
+        "cash": 600000,
+        "netBurn": 100000
+      },
+      "expected": {
+        "runwayMonths": 6
+      }
+    },
+    {
+      "id": "runway-no-burn",
+      "metric": "runway",
+      "input": {
+        "cash": 600000,
+        "netBurn": 0
+      },
+      "expected": {
+        "runwayMonths": null,
+        "note": "No positive net burn; finite runway is not applicable."
+      }
+    },
+    {
+      "id": "cac-payback-basic",
+      "metric": "cacPayback",
+      "input": {
+        "cac": 600,
+        "monthlyArpu": 200,
+        "grossMarginPct": 75
+      },
+      "expected": {
+        "months": 4
+      }
+    },
+    {
+      "id": "quick-ratio-basic",
+      "metric": "quickRatio",
+      "input": {
+        "newMrr": 20000,
+        "expansionMrr": 5000,
+        "contractionMrr": 3000,
+        "churnedMrr": 7000
+      },
+      "expected": {
+        "quickRatio": 2.5
+      }
+    },
+    {
+      "id": "rule-of-40-basic",
+      "metric": "ruleOf40",
+      "input": {
+        "growthPct": 30,
+        "profitabilityMarginPct": 15
+      },
+      "expected": {
+        "ruleOf40": 45
+      }
+    },
+    {
+      "id": "gross-margin-basic",
+      "metric": "grossMargin",
+      "input": {
+        "revenue": 100000,
+        "cogs": 40000
+      },
+      "expected": {
+        "grossProfit": 60000,
+        "grossMarginPct": 60
+      }
+    },
+    {
+      "id": "ccc-basic",
+      "metric": "cashConversionCycle",
+      "input": {
+        "dio": 40,
+        "dso": 35,
+        "dpo": 30
+      },
+      "expected": {
+        "days": 45
+      }
+    }
+  ]
+}
