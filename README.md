@@ -1,94 +1,80 @@
 # AI Agent Skills
 
-A reusable Agent Skills library for business, finance, software engineering, product, marketing, and domain-specific workflows.
+A composable Agent Skills library for business analysis, finance, SaaS metrics, and reusable AI workflows.
 
-The repository is designed to work across agentic environments such as Codex, Claude Code, Cursor, and other tools that support Markdown-based Agent Skills.
+Designed for Codex, Claude Code, Cursor, VS Code agent workflows, and other environments that consume Markdown-based skills.
 
 ## Architecture
 
 ```text
-skills/
-├── business-context/
-│   └── SKILL.md
-└── cfo-business-analyst-agent/
-    ├── SKILL.md
-    └── references/
-        ├── metrics.md
-        └── diagnostics.md
-
-AGENTS.md
-CONTRIBUTING.md
-VERSIONS.md
+                         business-context
+                                │
+                                ▼
+                      .agents/business.md
+                                │
+             ┌──────────────────┼──────────────────┐
+             ▼                  ▼                  ▼
+        Atomic Metrics      SaaS Metrics     Financial Health
+             │                  │                  │
+             └──────────────┬───┴──────────────┬───┘
+                            ▼                  ▼
+                    CFO / Business Analyst
+                            │
+                            ▼
+                  Monthly Business Review
 ```
 
-## Shared business context
+See `docs/ARCHITECTURE.md` for the design model.
 
-`business-context` is the foundational skill.
+## Current library
 
-It creates or maintains:
+### Context
+- `business-context`
 
-```text
-.agents/business.md
-```
+### Orchestrators
+- `cfo-business-analyst-agent`
+- `saas-metrics`
+- `financial-health`
 
-Other business-oriented skills can read this file before working so that company context does not need to be repeated in every prompt.
+### Workflows
+- `monthly-business-review`
 
-## Available skills
+### Acquisition & unit economics
+- `cac`
+- `ltv`
+- `ltv-cac`
+- `cac-payback`
+- `arpu`
+- `roi`
 
-### business-context
+### Recurring revenue & retention
+- `mrr`
+- `arr`
+- `churn`
+- `retention-rate`
+- `nrr`
+- `grr`
+- `quick-ratio`
 
-Builds and updates reusable business context including:
+### Growth efficiency
+- `revenue-growth`
+- `magic-number`
+- `rule-of-40`
 
-- business model;
-- product;
-- customers;
-- pricing;
-- channels;
-- costs;
-- KPIs;
-- competitors;
-- goals;
-- constraints;
-- technology.
+### Profitability & cash
+- `gross-margin`
+- `contribution-margin`
+- `ebitda`
+- `burn-rate`
+- `runway`
+- `break-even`
+- `cash-conversion-cycle`
 
-Path:
+### Commerce & risk
+- `aov`
+- `customer-concentration`
 
-```text
-skills/business-context/SKILL.md
-```
-
-### cfo-business-analyst-agent
-
-Analyzes business and financial performance using:
-
-- ROI;
-- CAC;
-- AOV;
-- Runway;
-- Churn;
-- MRR;
-- EBITDA;
-- related unit-economics and retention metrics when applicable.
-
-The skill separates workflow from domain knowledge:
-
-```text
-skills/cfo-business-analyst-agent/
-├── SKILL.md
-└── references/
-    ├── metrics.md
-    └── diagnostics.md
-```
-
-Path:
-
-```text
-skills/cfo-business-analyst-agent/SKILL.md
-```
-
-## Skill conventions
-
-Every skill should use:
+## Skill structure
 
 ```text
 skills/<skill-name>/
@@ -98,30 +84,67 @@ skills/<skill-name>/
 └── assets/       # optional
 ```
 
-The main `SKILL.md` should focus on workflow and decision rules. Detailed knowledge belongs in `references/`.
+Atomic skills own narrowly scoped knowledge. Orchestrators combine them. Workflows solve recurring management jobs.
 
-See:
+## Shared context
 
-- `AGENTS.md` for agent behavior and repository conventions;
-- `CONTRIBUTING.md` for creating new skills;
-- `VERSIONS.md` for skill versions.
-
-## Legacy path
-
-The original directory:
+`business-context` creates:
 
 ```text
-cfo-business-analyst-agent/
+.agents/business.md
 ```
 
-is temporarily retained for compatibility.
+Skills should reuse that context rather than repeatedly asking the user for the same company information.
 
-New integrations should use:
+## Machine-readable registry
 
 ```text
-skills/cfo-business-analyst-agent/
+registry/skills.json
 ```
+
+contains skill type, category, version, path, and dependencies.
+
+## Deterministic calculations
+
+A reusable calculator is included:
+
+```bash
+node scripts/metric-calculator.mjs nrr '{"beginningMrr":100000,"expansionMrr":10000,"contractionMrr":5000,"churnedMrr":10000}'
+```
+
+## Quality checks
+
+```bash
+npm run validate
+npm test
+npm run check
+```
+
+GitHub Actions runs these checks automatically.
+
+## Create a new skill
+
+Start from:
+
+```text
+templates/skill/SKILL.md
+```
+
+Then:
+
+1. add the skill under `skills/`;
+2. add it to `registry/skills.json`;
+3. add deterministic calculation support when relevant;
+4. add eval cases;
+5. connect it to an orchestrator;
+6. update `VERSIONS.md`.
+
+See `CONTRIBUTING.md` and `AGENTS.md`.
+
+## Legacy
+
+The original root-level `cfo-business-analyst-agent/` directory is retained temporarily for backward compatibility. New integrations should use `skills/cfo-business-analyst-agent/`.
 
 ## Language
 
-Current business skills are written primarily in Brazilian Portuguese with English-compatible metadata and naming.
+Business-facing skill content is primarily pt-BR. Skill identifiers and machine-readable metadata use stable English names for cross-agent compatibility.
