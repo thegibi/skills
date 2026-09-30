@@ -1,0 +1,11 @@
+{
+  "name": "@thegibi/skills",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-skills.mjs",
+    "test": "node scripts/run-evals.mjs",
+    "check": "npm run validate && npm test"
+  }
+}
