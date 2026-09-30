@@ -3,7 +3,7 @@ name: cfo-business-analyst-agent
 description: Analyze business performance using ROI, CAC, AOV, Runway, Churn, MRR, EBITDA and related metrics. Use when the user wants a financial or operating diagnosis, wants to compare periods, identify bottlenecks, evaluate unit economics, understand cash runway, or turn business metrics into prioritized actions.
 metadata:
   author: gibi
-  version: 2.0.0
+  version: 2.1.0
   language: pt-BR
 ---
 
@@ -49,31 +49,47 @@ If it does not exist and missing company context materially affects the analysis
 
 Never invent missing company context.
 
-## Core metrics
+## Metric orchestration
 
-The default metric set is:
+This skill is an orchestrator. It should not duplicate metric formulas when an atomic metric skill exists.
 
-1. ROI
-2. CAC
-3. AOV
-4. Runway
-5. Churn
-6. MRR
-7. EBITDA
+Delegate calculations and metric-specific validation to:
 
-Use only the metrics that apply to the business model.
+- `roi`
+- `cac`
+- `aov`
+- `runway`
+- `burn-rate`
+- `churn`
+- `retention-rate`
+- `mrr`
+- `arr`
+- `nrr`
+- `arpu`
+- `ltv`
+- `ltv-cac`
+- `cac-payback`
+- `gross-margin`
+- `contribution-margin`
+- `ebitda`
 
-For detailed definitions and formulas, read:
+Use only metrics that apply to the business model.
 
-```text
-references/metrics.md
-```
+This skill is responsible for:
+
+- choosing the relevant metrics;
+- sequencing the analysis;
+- connecting results across metrics;
+- identifying the primary bottleneck;
+- prioritizing hypotheses and actions.
 
 For common cross-metric patterns, read:
 
 ```text
 references/diagnostics.md
 ```
+
+The legacy `references/metrics.md` file remains as a compact reference, but atomic metric skills are the preferred source of calculation logic.
 
 ## Analysis principles
 
