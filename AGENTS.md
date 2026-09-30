@@ -92,3 +92,37 @@ Suggested commit prefixes:
 - `fix:` correction
 - `docs:` documentation
 - `refactor:` structural improvement
+
+
+## Architecture layers
+
+Use these layers deliberately:
+
+1. **Context** — persistent reusable business/project knowledge.
+2. **Atomic skill** — one calculation or narrowly scoped capability.
+3. **Orchestrator** — selects and combines atomic skills without duplicating formulas.
+4. **Workflow** — coordinates orchestrators around a recurring job.
+
+## Registry
+
+Every shipped skill must be listed in:
+
+```text
+registry/skills.json
+```
+
+Keep its version synchronized with `metadata.version`.
+
+## Deterministic calculations and evals
+
+When a skill contains arithmetic that should produce repeatable results, prefer adding support to `scripts/metric-calculator.mjs`.
+
+Add or update cases in `evals/cases.json`.
+
+Before considering a change complete, run:
+
+```bash
+npm run check
+```
+
+The GitHub Actions workflow enforces these checks on pull requests and main.
