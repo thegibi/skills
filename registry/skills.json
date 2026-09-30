@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-30",
+  "skills": [
+    {
+      "name": "business-context",
+      "type": "context",
+      "category": "context",
+      "version": "1.0.0",
+      "path": "skills/business-context/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "cfo-business-analyst-agent",
+      "type": "orchestrator",
+      "category": "business",
+      "version": "2.1.0",
+      "path": "skills/cfo-business-analyst-agent/SKILL.md",
+      "depends_on": [
+        "business-context"
+      ]
+    },
+    {
+      "name": "saas-metrics",
+      "type": "orchestrator",
+      "category": "saas",
+      "version": "1.0.0",
+      "path": "skills/saas-metrics/SKILL.md",
+      "depends_on": [
+        "business-context",
+        "mrr",
+        "arr",
+        "revenue-growth",
+        "churn",
+        "retention-rate",
+        "nrr",
+        "grr",
+        "cac",
+        "arpu",
+        "ltv",
+        "ltv-cac",
+        "cac-payback",
+        "gross-margin",
+        "contribution-margin",
+        "quick-ratio",
+        "magic-number",
+        "rule-of-40"
+      ]
+    },
+    {
+      "name": "financial-health",
+      "type": "orchestrator",
+      "category": "finance",
+      "version": "1.0.0",
+      "path": "skills/financial-health/SKILL.md",
+      "depends_on": [
+        "business-context",
+        "gross-margin",
+        "contribution-margin",
+        "ebitda",
+        "break-even",
+        "burn-rate",
+        "runway",
+        "cash-conversion-cycle",
+        "revenue-growth",
+        "roi",
+        "cac",
+        "ltv",
+        "ltv-cac",
+        "cac-payback",
+        "customer-concentration"
+      ]
+    },
+    {
+      "name": "monthly-business-review",
+      "type": "workflow",
+      "category": "business",
+      "version": "1.0.0",
+      "path": "skills/monthly-business-review/SKILL.md",
+      "depends_on": [
+        "business-context",
+        "saas-metrics",
+        "financial-health",
+        "cfo-business-analyst-agent"
+      ]
+    },
+    {
+      "name": "roi",
+      "type": "metric",
+      "category": "finance",
+      "version": "1.0.0",
+      "path": "skills/roi/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "cac",
+      "type": "metric",
+      "category": "growth",
+      "version": "1.0.0",
+      "path": "skills/cac/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "aov",
+      "type": "metric",
+      "category": "commerce",
+      "version": "1.0.0",
+      "path": "skills/aov/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "runway",
+      "type": "metric",
+      "category": "finance",
+      "version": "1.0.0",
+      "path": "skills/runway/SKILL.md",
+      "depends_on": [
+        "burn-rate"
+      ]
+    },
+    {
+      "name": "burn-rate",
+      "type": "metric",
+      "category": "finance",
+      "version": "1.0.0",
+      "path": "skills/burn-rate/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "churn",
+      "type": "metric",
+      "category": "saas",
+      "version": "1.0.0",
+      "path": "skills/churn/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "retention-rate",
+      "type": "metric",
+      "category": "saas",
+      "version": "1.0.0",
+      "path": "skills/retention-rate/SKILL.md",
+      "depends_on": [
+        "churn"
+      ]
+    },
+    {
+      "name": "mrr",
+      "type": "metric",
+      "category": "saas",
+      "version": "1.0.0",
+      "path": "skills/mrr/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "arr",
+      "type": "metric",
+      "category": "saas",
+      "version": "1.0.0",
+      "path": "skills/arr/SKILL.md",
+      "depends_on": [
+        "mrr"
+      ]
+    },
+    {
+      "name": "nrr",
+      "type": "metric",
+      "category": "saas",
+      "version": "1.0.0",
+      "path": "skills/nrr/SKILL.md",
+      "depends_on": [
+        "mrr"
+      ]
+    },
+    {
+      "name": "grr",
+      "type": "metric",
+      "category": "saas",
+      "version": "1.0.0",
+      "path": "skills/grr/SKILL.md",
+      "depends_on": [
+        "mrr"
+      ]
+    },
+    {
+      "name": "arpu",
+      "type": "metric",
+      "category": "saas",
+      "version": "1.0.0",
+      "path": "skills/arpu/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "ltv",
+      "type": "metric",
+      "category": "unit-economics",
+      "version": "1.0.0",
+      "path": "skills/ltv/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "ltv-cac",
+      "type": "metric",
+      "category": "unit-economics",
+      "version": "1.0.0",
+      "path": "skills/ltv-cac/SKILL.md",
+      "depends_on": [
+        "ltv",
+        "cac"
+      ]
+    },
+    {
+      "name": "cac-payback",
+      "type": "metric",
+      "category": "unit-economics",
+      "version": "1.0.0",
+      "path": "skills/cac-payback/SKILL.md",
+      "depends_on": [
+        "cac",
+        "arpu",
+        "gross-margin"
+      ]
+    },
+    {
+      "name": "gross-margin",
+      "type": "metric",
+      "category": "finance",
+      "version": "1.0.0",
+      "path": "skills/gross-margin/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "contribution-margin",
+      "type": "metric",
+      "category": "finance",
+      "version": "1.0.0",
+      "path": "skills/contribution-margin/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "ebitda",
+      "type": "metric",
+      "category": "finance",
+      "version": "1.0.0",
+      "path": "skills/ebitda/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "quick-ratio",
+      "type": "metric",
+      "category": "saas",
+      "version": "1.0.0",
+      "path": "skills/quick-ratio/SKILL.md",
+      "depends_on": [
+        "mrr"
+      ]
+    },
+    {
+      "name": "magic-number",
+      "type": "metric",
+      "category": "saas",
+      "version": "1.0.0",
+      "path": "skills/magic-number/SKILL.md",
+      "depends_on": [
+        "mrr",
+        "arr"
+      ]
+    },
+    {
+      "name": "rule-of-40",
+      "type": "metric",
+      "category": "saas",
+      "version": "1.0.0",
+      "path": "skills/rule-of-40/SKILL.md",
+      "depends_on": [
+        "revenue-growth",
+        "ebitda"
+      ]
+    },
+    {
+      "name": "revenue-growth",
+      "type": "metric",
+      "category": "growth",
+      "version": "1.0.0",
+      "path": "skills/revenue-growth/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "break-even",
+      "type": "metric",
+      "category": "finance",
+      "version": "1.0.0",
+      "path": "skills/break-even/SKILL.md",
+      "depends_on": [
+        "contribution-margin"
+      ]
+    },
+    {
+      "name": "customer-concentration",
+      "type": "metric",
+      "category": "risk",
+      "version": "1.0.0",
+      "path": "skills/customer-concentration/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "cash-conversion-cycle",
+      "type": "metric",
+      "category": "finance",
+      "version": "1.0.0",
+      "path": "skills/cash-conversion-cycle/SKILL.md",
+      "depends_on": []
+    }
+  ]
+}
