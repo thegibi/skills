@@ -64,3 +64,18 @@ Before shipping:
 - [ ] Related skills are referenced where appropriate.
 - [ ] `metadata.version` was updated.
 - [ ] `VERSIONS.md` was updated.
+
+
+## Required integration steps
+
+For a new skill:
+
+1. Start from `templates/skill/SKILL.md`.
+2. Add the skill to `registry/skills.json`.
+3. If arithmetic is deterministic, add calculator support.
+4. Add at least one normal eval and relevant edge-case evals.
+5. Connect the skill to relevant orchestrators.
+6. Update `VERSIONS.md`.
+7. Run `npm run check`.
+
+Pull requests should not merge when registry validation or evals fail.
