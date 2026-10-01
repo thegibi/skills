@@ -474,10 +474,24 @@
       "path": "skills/ecommerce-growth/SKILL.md",
       "depends_on": [
         "business-context",
+        "ecommerce-context",
+        "customer-research",
+        "ecommerce-marketing-plan",
         "channel-attribution",
         "channel-performance",
         "ecommerce-funnel",
         "product-performance",
+        "content-strategy",
+        "ads",
+        "social",
+        "copywriting",
+        "offers",
+        "cro",
+        "ad-creative",
+        "email-marketing",
+        "whatsapp-commerce",
+        "ecommerce-retention",
+        "referrals",
         "aov",
         "purchase-conversion-rate",
         "revenue-per-visitor",
@@ -490,7 +504,8 @@
         "cac",
         "ltv",
         "gross-margin",
-        "channel-budget-allocation"
+        "channel-budget-allocation",
+        "capital-allocation"
       ]
     },
     {
@@ -654,6 +669,197 @@
       "version": "1.0.0",
       "path": "skills/return-rate/SKILL.md",
       "depends_on": []
+    },
+    {
+      "name": "ecommerce-context",
+      "type": "context",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/ecommerce-context/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "customer-research",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/customer-research/SKILL.md",
+      "depends_on": [
+        "ecommerce-context"
+      ]
+    },
+    {
+      "name": "content-strategy",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/content-strategy/SKILL.md",
+      "depends_on": [
+        "ecommerce-context",
+        "customer-research"
+      ]
+    },
+    {
+      "name": "ecommerce-marketing-plan",
+      "type": "workflow",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/ecommerce-marketing-plan/SKILL.md",
+      "depends_on": [
+        "ecommerce-context",
+        "customer-research",
+        "content-strategy",
+        "channel-performance",
+        "ecommerce-funnel",
+        "product-performance",
+        "financial-health"
+      ]
+    },
+    {
+      "name": "ads",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/ads/SKILL.md",
+      "depends_on": [
+        "ecommerce-context",
+        "customer-research",
+        "offers",
+        "channel-attribution",
+        "channel-performance",
+        "channel-budget-allocation"
+      ]
+    },
+    {
+      "name": "social",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/social/SKILL.md",
+      "depends_on": [
+        "ecommerce-context",
+        "customer-research",
+        "content-strategy",
+        "product-performance"
+      ]
+    },
+    {
+      "name": "copywriting",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/copywriting/SKILL.md",
+      "depends_on": [
+        "ecommerce-context",
+        "customer-research",
+        "offers"
+      ]
+    },
+    {
+      "name": "offers",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/offers/SKILL.md",
+      "depends_on": [
+        "ecommerce-context",
+        "customer-research",
+        "promotion-analysis",
+        "discount-analysis",
+        "gross-margin"
+      ]
+    },
+    {
+      "name": "cro",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/cro/SKILL.md",
+      "depends_on": [
+        "ecommerce-funnel",
+        "customer-research",
+        "copywriting",
+        "offers"
+      ]
+    },
+    {
+      "name": "ad-creative",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/ad-creative/SKILL.md",
+      "depends_on": [
+        "customer-research",
+        "copywriting",
+        "ads"
+      ]
+    },
+    {
+      "name": "email-marketing",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/email-marketing/SKILL.md",
+      "depends_on": [
+        "ecommerce-context",
+        "customer-research",
+        "copywriting",
+        "ecommerce-retention"
+      ]
+    },
+    {
+      "name": "whatsapp-commerce",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/whatsapp-commerce/SKILL.md",
+      "depends_on": [
+        "ecommerce-context",
+        "customer-research",
+        "channel-attribution",
+        "ecommerce-retention"
+      ]
+    },
+    {
+      "name": "ecommerce-retention",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/ecommerce-retention/SKILL.md",
+      "depends_on": [
+        "repeat-purchase-rate",
+        "purchase-frequency",
+        "ltv",
+        "email-marketing",
+        "whatsapp-commerce"
+      ]
+    },
+    {
+      "name": "referrals",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/referrals/SKILL.md",
+      "depends_on": [
+        "ecommerce-retention",
+        "channel-attribution",
+        "ltv",
+        "cac"
+      ]
+    },
+    {
+      "name": "capital-allocation",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/capital-allocation/SKILL.md",
+      "depends_on": [
+        "financial-health",
+        "channel-budget-allocation",
+        "ecommerce-growth",
+        "runway",
+        "gross-margin"
+      ]
     }
   ]
 }
