@@ -310,6 +310,161 @@
       "version": "1.0.0",
       "path": "skills/cash-conversion-cycle/SKILL.md",
       "depends_on": []
+    },
+    {
+      "name": "channel-performance",
+      "type": "orchestrator",
+      "category": "growth",
+      "version": "1.0.0",
+      "path": "skills/channel-performance/SKILL.md",
+      "depends_on": [
+        "ctr",
+        "cpc",
+        "cpl",
+        "cpql",
+        "conversion-rate",
+        "cac",
+        "roas",
+        "revenue-per-lead",
+        "gross-profit-per-lead",
+        "roi",
+        "ltv",
+        "ltv-cac",
+        "cac-payback",
+        "gross-margin",
+        "lead-source-quality",
+        "channel-attribution",
+        "channel-budget-allocation"
+      ]
+    },
+    {
+      "name": "lead-source-quality",
+      "type": "orchestrator",
+      "category": "growth",
+      "version": "1.0.0",
+      "path": "skills/lead-source-quality/SKILL.md",
+      "depends_on": [
+        "conversion-rate",
+        "revenue-per-lead",
+        "gross-profit-per-lead",
+        "ltv",
+        "cac",
+        "retention-rate",
+        "channel-attribution"
+      ]
+    },
+    {
+      "name": "channel-attribution",
+      "type": "orchestrator",
+      "category": "growth",
+      "version": "1.0.0",
+      "path": "skills/channel-attribution/SKILL.md",
+      "depends_on": [
+        "channel-performance",
+        "lead-source-quality"
+      ]
+    },
+    {
+      "name": "channel-budget-allocation",
+      "type": "orchestrator",
+      "category": "growth",
+      "version": "1.0.0",
+      "path": "skills/channel-budget-allocation/SKILL.md",
+      "depends_on": [
+        "channel-performance",
+        "lead-source-quality",
+        "channel-attribution",
+        "cac",
+        "ltv-cac",
+        "cac-payback",
+        "gross-margin",
+        "runway"
+      ]
+    },
+    {
+      "name": "growth-channel-strategy",
+      "type": "workflow",
+      "category": "growth",
+      "version": "1.0.0",
+      "path": "skills/growth-channel-strategy/SKILL.md",
+      "depends_on": [
+        "business-context",
+        "channel-attribution",
+        "channel-performance",
+        "lead-source-quality",
+        "channel-budget-allocation",
+        "financial-health"
+      ]
+    },
+    {
+      "name": "ctr",
+      "type": "metric",
+      "category": "acquisition",
+      "version": "1.0.0",
+      "path": "skills/ctr/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "cpc",
+      "type": "metric",
+      "category": "acquisition",
+      "version": "1.0.0",
+      "path": "skills/cpc/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "cpl",
+      "type": "metric",
+      "category": "acquisition",
+      "version": "1.0.0",
+      "path": "skills/cpl/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "cpql",
+      "type": "metric",
+      "category": "acquisition",
+      "version": "1.0.0",
+      "path": "skills/cpql/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "conversion-rate",
+      "type": "metric",
+      "category": "funnel",
+      "version": "1.0.0",
+      "path": "skills/conversion-rate/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "roas",
+      "type": "metric",
+      "category": "acquisition",
+      "version": "1.0.0",
+      "path": "skills/roas/SKILL.md",
+      "depends_on": [
+        "channel-attribution"
+      ]
+    },
+    {
+      "name": "revenue-per-lead",
+      "type": "metric",
+      "category": "growth",
+      "version": "1.0.0",
+      "path": "skills/revenue-per-lead/SKILL.md",
+      "depends_on": [
+        "channel-attribution"
+      ]
+    },
+    {
+      "name": "gross-profit-per-lead",
+      "type": "metric",
+      "category": "growth",
+      "version": "1.0.0",
+      "path": "skills/gross-profit-per-lead/SKILL.md",
+      "depends_on": [
+        "gross-margin"
+      ]
     }
   ]
 }
