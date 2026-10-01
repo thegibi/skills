@@ -26,6 +26,55 @@ Designed for Codex, Claude Code, Cursor, VS Code agent workflows, and other envi
 
 See `docs/ARCHITECTURE.md` for the design model.
 
+## Domains
+
+This repository keeps SaaS and Ecommerce as separate business domains.
+
+### Ecommerce
+
+Use `ecommerce-growth` as the main ecommerce orchestrator.
+
+```text
+Traffic
+→ Product View
+→ Add to Cart
+→ Checkout
+→ Purchase
+→ Repeat Purchase
+→ LTV
+```
+
+Primary ecommerce capabilities:
+
+- `ecommerce-growth`
+- `ecommerce-funnel`
+- `product-performance`
+- `discount-analysis`
+- `promotion-analysis`
+
+Canonical ecommerce events and fields:
+
+```text
+references/ecommerce-data-schema.md
+```
+
+### SaaS
+
+Use `saas-metrics` for recurring SaaS economics.
+
+```text
+Signup
+→ Activation
+→ Paid
+→ MRR
+→ Retention
+→ Expansion
+```
+
+SaaS-specific metrics such as MRR, ARR, NRR, GRR, Quick Ratio, Magic Number, and Rule of 40 should not be forced into ecommerce analysis.
+
+Shared skills such as CAC, LTV, ROI, Gross Margin, Channel Attribution, and Financial Health can be used by either domain when applicable.
+
 ## Current library
 
 ### Context
@@ -181,4 +230,43 @@ The key decision flow is:
 
 ```text
 Attribution → Channel Performance → Lead Quality → Budget Allocation → Growth Strategy
+```
+
+
+## Ecommerce funnel
+
+The ecommerce domain monitors the complete sales and post-purchase funnel:
+
+```text
+Sessions
+→ Product Views
+→ Add to Cart
+→ Checkout Started
+→ Purchase
+→ Refund / Return
+→ Repeat Purchase
+```
+
+Key ecommerce metrics include:
+
+- Purchase Conversion Rate
+- Add-to-Cart Rate
+- Checkout Conversion
+- Cart Abandonment
+- AOV
+- Revenue per Visitor
+- Gross Profit per Visitor
+- Gross Profit per Order
+- Repeat Purchase Rate
+- Purchase Frequency
+- Items per Order
+- Refund Rate
+- Return Rate
+
+Channel analysis can be joined to product and funnel performance, allowing comparisons such as:
+
+```text
+Google Search × Product A
+Meta Ads × Product B
+Instagram Organic × Product C
 ```
