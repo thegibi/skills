@@ -5,6 +5,22 @@ Current versions of the reusable skills in this repository.
 | Skill | Version | Type | Last Updated |
 |---|---:|---|---|
 | business-context | 1.0.0 | Context | 2026-09-30 |
+| ecommerce-context | 1.0.0 | Context | 2026-09-30 |
+| customer-research | 1.0.0 | Orchestrator | 2026-09-30 |
+| content-strategy | 1.0.0 | Orchestrator | 2026-09-30 |
+| ecommerce-marketing-plan | 1.0.0 | Workflow | 2026-09-30 |
+| ads | 1.0.0 | Orchestrator | 2026-09-30 |
+| social | 1.0.0 | Orchestrator | 2026-09-30 |
+| copywriting | 1.0.0 | Orchestrator | 2026-09-30 |
+| offers | 1.0.0 | Orchestrator | 2026-09-30 |
+| cro | 1.0.0 | Orchestrator | 2026-09-30 |
+| ad-creative | 1.0.0 | Orchestrator | 2026-09-30 |
+| email-marketing | 1.0.0 | Orchestrator | 2026-09-30 |
+| whatsapp-commerce | 1.0.0 | Orchestrator | 2026-09-30 |
+| ecommerce-retention | 1.0.0 | Orchestrator | 2026-09-30 |
+| referrals | 1.0.0 | Orchestrator | 2026-09-30 |
+| capital-allocation | 1.0.0 | Orchestrator | 2026-09-30 |
+
 | ecommerce-growth | 1.0.0 | Orchestrator | 2026-09-30 |
 | ecommerce-funnel | 1.0.0 | Orchestrator | 2026-09-30 |
 | product-performance | 1.0.0 | Orchestrator | 2026-09-30 |
@@ -69,6 +85,9 @@ Current versions of the reusable skills in this repository.
 ## Recent changes
 
 ### 2026-09-30
+
+- Expanded Ecommerce into a full Growth Operating System covering customer research, content, paid acquisition, social, copy, offers, CRO, lifecycle marketing, WhatsApp, retention, referrals, and capital allocation.
+- Added MIT third-party attribution for structural inspiration adapted from Corey Haines' Marketing Skills project.
 
 - Added a dedicated Ecommerce domain, separate from SaaS, with a complete sales-funnel model from session through repeat purchase.
 - Added ecommerce product, promotion, discount, refund, return, and repeat-purchase analysis.
