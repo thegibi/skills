@@ -9,6 +9,19 @@ Current versions of the reusable skills in this repository.
 | saas-metrics | 1.0.0 | Orchestrator | 2026-09-30 |
 | financial-health | 1.0.0 | Orchestrator | 2026-09-30 |
 | monthly-business-review | 1.0.0 | Workflow | 2026-09-30 |
+| channel-performance | 1.0.0 | Orchestrator | 2026-09-30 |
+| lead-source-quality | 1.0.0 | Orchestrator | 2026-09-30 |
+| channel-attribution | 1.0.0 | Orchestrator | 2026-09-30 |
+| channel-budget-allocation | 1.0.0 | Orchestrator | 2026-09-30 |
+| growth-channel-strategy | 1.0.0 | Workflow | 2026-09-30 |
+| ctr | 1.0.0 | Metric | 2026-09-30 |
+| cpc | 1.0.0 | Metric | 2026-09-30 |
+| cpl | 1.0.0 | Metric | 2026-09-30 |
+| cpql | 1.0.0 | Metric | 2026-09-30 |
+| conversion-rate | 1.0.0 | Metric | 2026-09-30 |
+| roas | 1.0.0 | Metric | 2026-09-30 |
+| revenue-per-lead | 1.0.0 | Metric | 2026-09-30 |
+| gross-profit-per-lead | 1.0.0 | Metric | 2026-09-30 |
 | roi | 1.0.0 | Metric | 2026-09-30 |
 | cac | 1.0.0 | Metric | 2026-09-30 |
 | aov | 1.0.0 | Metric | 2026-09-30 |
@@ -38,6 +51,10 @@ Current versions of the reusable skills in this repository.
 ## Recent changes
 
 ### 2026-09-30
+
+- Added channel intelligence layer for channel performance, attribution, lead quality, budget allocation, and growth-channel strategy.
+- Added atomic acquisition metrics: CTR, CPC, CPL, CPQL, conversion rate, ROAS, revenue per lead, and gross profit per lead.
+- Added canonical channel and lead data schema for Instagram, Facebook, Google, WhatsApp, email, paid, organic, and referral analysis.
 
 - Introduced a layered architecture: context → atomic skills → orchestrators → workflows.
 - Added advanced SaaS metrics: GRR, Quick Ratio, Magic Number, Rule of 40, and Revenue Growth.
