@@ -107,6 +107,94 @@
       "expected": {
         "days": 45
       }
+    },
+    {
+      "id": "ctr-basic",
+      "metric": "ctr",
+      "input": {
+        "clicks": 250,
+        "impressions": 10000
+      },
+      "expected": {
+        "ctrPct": 2.5
+      }
+    },
+    {
+      "id": "cpc-basic",
+      "metric": "cpc",
+      "input": {
+        "spend": 5000,
+        "clicks": 1000
+      },
+      "expected": {
+        "cpc": 5
+      }
+    },
+    {
+      "id": "cpl-basic",
+      "metric": "cpl",
+      "input": {
+        "spend": 5000,
+        "leads": 250
+      },
+      "expected": {
+        "cpl": 20
+      }
+    },
+    {
+      "id": "cpql-basic",
+      "metric": "cpql",
+      "input": {
+        "spend": 5000,
+        "qualifiedLeads": 100
+      },
+      "expected": {
+        "cpql": 50
+      }
+    },
+    {
+      "id": "conversion-rate-basic",
+      "metric": "conversionRate",
+      "input": {
+        "conversions": 25,
+        "startingPopulation": 200
+      },
+      "expected": {
+        "conversionRatePct": 12.5
+      }
+    },
+    {
+      "id": "roas-basic",
+      "metric": "roas",
+      "input": {
+        "revenue": 30000,
+        "spend": 10000
+      },
+      "expected": {
+        "roas": 3
+      }
+    },
+    {
+      "id": "revenue-per-lead-basic",
+      "metric": "revenuePerLead",
+      "input": {
+        "revenue": 30000,
+        "leads": 200
+      },
+      "expected": {
+        "revenuePerLead": 150
+      }
+    },
+    {
+      "id": "gross-profit-per-lead-basic",
+      "metric": "grossProfitPerLead",
+      "input": {
+        "grossProfit": 12000,
+        "leads": 200
+      },
+      "expected": {
+        "grossProfitPerLead": 60
+      }
     }
   ]
 }
