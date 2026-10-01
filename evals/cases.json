@@ -195,6 +195,138 @@
       "expected": {
         "grossProfitPerLead": 60
       }
+    },
+    {
+      "id": "purchase-conversion-basic",
+      "metric": "purchaseConversionRate",
+      "input": {
+        "purchases": 250,
+        "sessions": 10000
+      },
+      "expected": {
+        "purchaseConversionRatePct": 2.5
+      }
+    },
+    {
+      "id": "add-to-cart-basic",
+      "metric": "addToCartRate",
+      "input": {
+        "addToCart": 800,
+        "productViews": 10000
+      },
+      "expected": {
+        "addToCartRatePct": 8
+      }
+    },
+    {
+      "id": "checkout-conversion-basic",
+      "metric": "checkoutConversion",
+      "input": {
+        "purchases": 250,
+        "checkoutStarts": 500
+      },
+      "expected": {
+        "checkoutConversionPct": 50
+      }
+    },
+    {
+      "id": "cart-abandonment-basic",
+      "metric": "cartAbandonmentRate",
+      "input": {
+        "starts": 500,
+        "purchases": 250
+      },
+      "expected": {
+        "abandonmentRatePct": 50
+      }
+    },
+    {
+      "id": "revenue-per-visitor-basic",
+      "metric": "revenuePerVisitor",
+      "input": {
+        "revenue": 100000,
+        "visitors": 10000
+      },
+      "expected": {
+        "revenuePerVisitor": 10
+      }
+    },
+    {
+      "id": "gross-profit-per-visitor-basic",
+      "metric": "grossProfitPerVisitor",
+      "input": {
+        "grossProfit": 40000,
+        "visitors": 10000
+      },
+      "expected": {
+        "grossProfitPerVisitor": 4
+      }
+    },
+    {
+      "id": "gross-profit-per-order-basic",
+      "metric": "grossProfitPerOrder",
+      "input": {
+        "grossProfit": 40000,
+        "orders": 250
+      },
+      "expected": {
+        "grossProfitPerOrder": 160
+      }
+    },
+    {
+      "id": "repeat-purchase-basic",
+      "metric": "repeatPurchaseRate",
+      "input": {
+        "repeatCustomers": 180,
+        "eligibleCustomers": 1000
+      },
+      "expected": {
+        "repeatPurchaseRatePct": 18
+      }
+    },
+    {
+      "id": "purchase-frequency-basic",
+      "metric": "purchaseFrequency",
+      "input": {
+        "orders": 1200,
+        "customers": 1000
+      },
+      "expected": {
+        "purchaseFrequency": 1.2
+      }
+    },
+    {
+      "id": "items-per-order-basic",
+      "metric": "itemsPerOrder",
+      "input": {
+        "unitsSold": 450,
+        "orders": 300
+      },
+      "expected": {
+        "itemsPerOrder": 1.5
+      }
+    },
+    {
+      "id": "refund-rate-basic",
+      "metric": "orderRefundRate",
+      "input": {
+        "refundedOrders": 15,
+        "orders": 300
+      },
+      "expected": {
+        "refundRatePct": 5
+      }
+    },
+    {
+      "id": "return-rate-basic",
+      "metric": "returnRate",
+      "input": {
+        "returns": 20,
+        "salesBase": 400
+      },
+      "expected": {
+        "returnRatePct": 5
+      }
     }
   ]
 }
