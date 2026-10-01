@@ -33,6 +33,9 @@ Growth decisions must also consider:
 ## Ecommerce dependencies
 
 - `business-context`
+- `ecommerce-context`
+- `customer-research`
+- `ecommerce-marketing-plan`
 - `channel-attribution`
 - `channel-performance`
 - `ecommerce-funnel`
@@ -50,6 +53,18 @@ Growth decisions must also consider:
 - `ltv`
 - `gross-margin`
 - `channel-budget-allocation`
+- `content-strategy`
+- `ads`
+- `social`
+- `copywriting`
+- `offers`
+- `cro`
+- `ad-creative`
+- `email-marketing`
+- `whatsapp-commerce`
+- `ecommerce-retention`
+- `referrals`
+- `capital-allocation`
 
 ## Workflow
 
@@ -62,7 +77,8 @@ Growth decisions must also consider:
 7. Diagnose repeat purchase and customer value.
 8. Check inventory, fulfillment, and cash constraints.
 9. Select the primary growth constraint.
-10. Create a 30/60/90-day action plan.
+10. Build acquisition, content, nurture, retention, and capital priorities.
+11. Create a 30/60/90-day action plan.
 
 ## Decision hierarchy
 
