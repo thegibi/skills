@@ -465,6 +465,195 @@
       "depends_on": [
         "gross-margin"
       ]
+    },
+    {
+      "name": "ecommerce-growth",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/ecommerce-growth/SKILL.md",
+      "depends_on": [
+        "business-context",
+        "channel-attribution",
+        "channel-performance",
+        "ecommerce-funnel",
+        "product-performance",
+        "aov",
+        "purchase-conversion-rate",
+        "revenue-per-visitor",
+        "gross-profit-per-visitor",
+        "gross-profit-per-order",
+        "repeat-purchase-rate",
+        "purchase-frequency",
+        "discount-analysis",
+        "promotion-analysis",
+        "cac",
+        "ltv",
+        "gross-margin",
+        "channel-budget-allocation"
+      ]
+    },
+    {
+      "name": "ecommerce-funnel",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/ecommerce-funnel/SKILL.md",
+      "depends_on": [
+        "conversion-rate",
+        "purchase-conversion-rate",
+        "add-to-cart-rate",
+        "checkout-conversion",
+        "cart-abandonment-rate",
+        "aov",
+        "revenue-per-visitor",
+        "gross-profit-per-visitor",
+        "repeat-purchase-rate"
+      ]
+    },
+    {
+      "name": "product-performance",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/product-performance/SKILL.md",
+      "depends_on": [
+        "gross-margin",
+        "aov",
+        "refund-rate",
+        "return-rate",
+        "repeat-purchase-rate"
+      ]
+    },
+    {
+      "name": "discount-analysis",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/discount-analysis/SKILL.md",
+      "depends_on": [
+        "purchase-conversion-rate",
+        "aov",
+        "gross-margin",
+        "cac",
+        "repeat-purchase-rate"
+      ]
+    },
+    {
+      "name": "promotion-analysis",
+      "type": "orchestrator",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/promotion-analysis/SKILL.md",
+      "depends_on": [
+        "purchase-conversion-rate",
+        "aov",
+        "items-per-order",
+        "gross-margin",
+        "repeat-purchase-rate",
+        "refund-rate",
+        "return-rate"
+      ]
+    },
+    {
+      "name": "purchase-conversion-rate",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/purchase-conversion-rate/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "add-to-cart-rate",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/add-to-cart-rate/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "checkout-conversion",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/checkout-conversion/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "cart-abandonment-rate",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/cart-abandonment-rate/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "revenue-per-visitor",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/revenue-per-visitor/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "gross-profit-per-visitor",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/gross-profit-per-visitor/SKILL.md",
+      "depends_on": [
+        "gross-margin"
+      ]
+    },
+    {
+      "name": "gross-profit-per-order",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/gross-profit-per-order/SKILL.md",
+      "depends_on": [
+        "gross-margin"
+      ]
+    },
+    {
+      "name": "repeat-purchase-rate",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/repeat-purchase-rate/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "purchase-frequency",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/purchase-frequency/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "items-per-order",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/items-per-order/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "refund-rate",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/refund-rate/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "name": "return-rate",
+      "type": "metric",
+      "category": "ecommerce",
+      "version": "1.0.0",
+      "path": "skills/return-rate/SKILL.md",
+      "depends_on": []
     }
   ]
 }
