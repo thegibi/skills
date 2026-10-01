@@ -109,6 +109,30 @@ const calculators = {
   }),
   cashConversionCycle: ({dio,dso,dpo}) => ({
     days: finite(dio,'dio') + finite(dso,'dso') - finite(dpo,'dpo')
+  }),
+  ctr: ({clicks,impressions}) => ({
+    ctrPct: pct(finite(clicks,'clicks') / nonzero(impressions,'impressions'))
+  }),
+  cpc: ({spend,clicks}) => ({
+    cpc: finite(spend,'spend') / nonzero(clicks,'clicks')
+  }),
+  cpl: ({spend,leads}) => ({
+    cpl: finite(spend,'spend') / nonzero(leads,'leads')
+  }),
+  cpql: ({spend,qualifiedLeads}) => ({
+    cpql: finite(spend,'spend') / nonzero(qualifiedLeads,'qualifiedLeads')
+  }),
+  conversionRate: ({conversions,startingPopulation}) => ({
+    conversionRatePct: pct(finite(conversions,'conversions') / nonzero(startingPopulation,'startingPopulation'))
+  }),
+  roas: ({revenue,spend}) => ({
+    roas: finite(revenue,'revenue') / nonzero(spend,'spend')
+  }),
+  revenuePerLead: ({revenue,leads}) => ({
+    revenuePerLead: finite(revenue,'revenue') / nonzero(leads,'leads')
+  }),
+  grossProfitPerLead: ({grossProfit,leads}) => ({
+    grossProfitPerLead: finite(grossProfit,'grossProfit') / nonzero(leads,'leads')
   })
 };
 
