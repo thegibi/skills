@@ -133,6 +133,45 @@ const calculators = {
   }),
   grossProfitPerLead: ({grossProfit,leads}) => ({
     grossProfitPerLead: finite(grossProfit,'grossProfit') / nonzero(leads,'leads')
+  }),
+  purchaseConversionRate: ({purchases,sessions}) => ({
+    purchaseConversionRatePct: pct(finite(purchases,'purchases') / nonzero(sessions,'sessions'))
+  }),
+  addToCartRate: ({addToCart,productViews}) => ({
+    addToCartRatePct: pct(finite(addToCart,'addToCart') / nonzero(productViews,'productViews'))
+  }),
+  checkoutConversion: ({purchases,checkoutStarts}) => ({
+    checkoutConversionPct: pct(finite(purchases,'purchases') / nonzero(checkoutStarts,'checkoutStarts'))
+  }),
+  cartAbandonmentRate: ({starts,purchases}) => ({
+    abandonmentRatePct: pct((nonzero(starts,'starts') - finite(purchases,'purchases')) / starts)
+  }),
+  revenuePerVisitor: ({revenue,visitors}) => ({
+    revenuePerVisitor: finite(revenue,'revenue') / nonzero(visitors,'visitors')
+  }),
+  grossProfitPerVisitor: ({grossProfit,visitors}) => ({
+    grossProfitPerVisitor: finite(grossProfit,'grossProfit') / nonzero(visitors,'visitors')
+  }),
+  grossProfitPerOrder: ({grossProfit,orders}) => ({
+    grossProfitPerOrder: finite(grossProfit,'grossProfit') / nonzero(orders,'orders')
+  }),
+  repeatPurchaseRate: ({repeatCustomers,eligibleCustomers}) => ({
+    repeatPurchaseRatePct: pct(finite(repeatCustomers,'repeatCustomers') / nonzero(eligibleCustomers,'eligibleCustomers'))
+  }),
+  purchaseFrequency: ({orders,customers}) => ({
+    purchaseFrequency: finite(orders,'orders') / nonzero(customers,'customers')
+  }),
+  itemsPerOrder: ({unitsSold,orders}) => ({
+    itemsPerOrder: finite(unitsSold,'unitsSold') / nonzero(orders,'orders')
+  }),
+  orderRefundRate: ({refundedOrders,orders}) => ({
+    refundRatePct: pct(finite(refundedOrders,'refundedOrders') / nonzero(orders,'orders'))
+  }),
+  revenueRefundRate: ({refundedRevenue,revenue}) => ({
+    refundRatePct: pct(finite(refundedRevenue,'refundedRevenue') / nonzero(revenue,'revenue'))
+  }),
+  returnRate: ({returns,salesBase}) => ({
+    returnRatePct: pct(finite(returns,'returns') / nonzero(salesBase,'salesBase'))
   })
 };
 
