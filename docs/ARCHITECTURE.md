@@ -107,3 +107,28 @@ Prefer this sequence:
 6. update versions and documentation.
 
 Avoid adding logic directly to an orchestrator when it deserves its own reusable skill.
+
+
+## Domain separation
+
+SaaS and Ecommerce are separate domains.
+
+### Ecommerce
+
+The primary ecommerce orchestrator is `ecommerce-growth`.
+
+Its operating loop is:
+
+```text
+Context → Research → Demand → Conversion → Purchase → Retention → Economics → Capital → New Tests
+```
+
+### SaaS
+
+The primary SaaS metric orchestrator is `saas-metrics`.
+
+SaaS-specific recurring-revenue concepts should not be forced into ecommerce analysis.
+
+### Shared core
+
+Both domains may reuse atomic capabilities such as CAC, LTV, ROI, Gross Margin, attribution, and financial health when applicable.
