@@ -270,3 +270,68 @@ Google Search × Product A
 Meta Ads × Product B
 Instagram Organic × Product C
 ```
+
+
+## Ecommerce Growth Operating System
+
+The ecommerce domain is designed as an operating system for growth, not only a metric library.
+
+```text
+Ecommerce Context
+      ↓
+Customer Research
+      ↓
+Content / Offer / Creative
+      ↓
+Ads / Social / Organic
+      ↓
+Channel Attribution
+      ↓
+Ecommerce Funnel
+      ↓
+Purchase
+      ↓
+Email / WhatsApp / Retention / Referral
+      ↓
+Repeat Purchase / LTV
+      ↓
+Financial Health / Capital Allocation
+      ↓
+Scale / Optimize / Reallocate
+```
+
+### Ecommerce strategy and customer
+- `ecommerce-context`
+- `customer-research`
+- `ecommerce-marketing-plan`
+
+### Demand and content
+- `content-strategy`
+- `social`
+- `ads`
+- `ad-creative`
+- `copywriting`
+- `offers`
+
+### Conversion
+- `cro`
+- `ecommerce-funnel`
+- `product-performance`
+- `discount-analysis`
+- `promotion-analysis`
+
+### Lifecycle and retention
+- `email-marketing`
+- `whatsapp-commerce`
+- `ecommerce-retention`
+- `referrals`
+
+### Economics and capital
+- `channel-performance`
+- `lead-source-quality`
+- `channel-attribution`
+- `channel-budget-allocation`
+- `financial-health`
+- `capital-allocation`
+
+The marketing architecture takes structural inspiration from Corey Haines' open-source Marketing Skills project. See `THIRD_PARTY_NOTICES.md` for attribution.
