@@ -39,6 +39,23 @@ See `docs/ARCHITECTURE.md` for the design model.
 ### Workflows
 - `monthly-business-review`
 
+### Channel intelligence
+- `channel-performance`
+- `lead-source-quality`
+- `channel-attribution`
+- `channel-budget-allocation`
+- `growth-channel-strategy`
+
+### Acquisition metrics
+- `ctr`
+- `cpc`
+- `cpl`
+- `cpql`
+- `conversion-rate`
+- `roas`
+- `revenue-per-lead`
+- `gross-profit-per-lead`
+
 ### Acquisition & unit economics
 - `cac`
 - `ltv`
@@ -148,3 +165,20 @@ The original root-level `cfo-business-analyst-agent/` directory is retained temp
 ## Language
 
 Business-facing skill content is primarily pt-BR. Skill identifiers and machine-readable metadata use stable English names for cross-agent compatibility.
+
+
+## Channel intelligence
+
+The growth-channel layer is designed to compare sources such as Instagram, Facebook, Google, WhatsApp, email, paid media, organic, and referrals using downstream economics rather than lead volume alone.
+
+Canonical schemas live in:
+
+```text
+references/channel-data-schema.md
+```
+
+The key decision flow is:
+
+```text
+Attribution → Channel Performance → Lead Quality → Budget Allocation → Growth Strategy
+```
