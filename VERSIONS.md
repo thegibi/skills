@@ -5,6 +5,24 @@ Current versions of the reusable skills in this repository.
 | Skill | Version | Type | Last Updated |
 |---|---:|---|---|
 | business-context | 1.0.0 | Context | 2026-09-30 |
+| ecommerce-growth | 1.0.0 | Orchestrator | 2026-09-30 |
+| ecommerce-funnel | 1.0.0 | Orchestrator | 2026-09-30 |
+| product-performance | 1.0.0 | Orchestrator | 2026-09-30 |
+| discount-analysis | 1.0.0 | Orchestrator | 2026-09-30 |
+| promotion-analysis | 1.0.0 | Orchestrator | 2026-09-30 |
+| purchase-conversion-rate | 1.0.0 | Metric | 2026-09-30 |
+| add-to-cart-rate | 1.0.0 | Metric | 2026-09-30 |
+| checkout-conversion | 1.0.0 | Metric | 2026-09-30 |
+| cart-abandonment-rate | 1.0.0 | Metric | 2026-09-30 |
+| revenue-per-visitor | 1.0.0 | Metric | 2026-09-30 |
+| gross-profit-per-visitor | 1.0.0 | Metric | 2026-09-30 |
+| gross-profit-per-order | 1.0.0 | Metric | 2026-09-30 |
+| repeat-purchase-rate | 1.0.0 | Metric | 2026-09-30 |
+| purchase-frequency | 1.0.0 | Metric | 2026-09-30 |
+| items-per-order | 1.0.0 | Metric | 2026-09-30 |
+| refund-rate | 1.0.0 | Metric | 2026-09-30 |
+| return-rate | 1.0.0 | Metric | 2026-09-30 |
+
 | cfo-business-analyst-agent | 2.1.0 | Orchestrator | 2026-09-30 |
 | saas-metrics | 1.0.0 | Orchestrator | 2026-09-30 |
 | financial-health | 1.0.0 | Orchestrator | 2026-09-30 |
@@ -51,6 +69,10 @@ Current versions of the reusable skills in this repository.
 ## Recent changes
 
 ### 2026-09-30
+
+- Added a dedicated Ecommerce domain, separate from SaaS, with a complete sales-funnel model from session through repeat purchase.
+- Added ecommerce product, promotion, discount, refund, return, and repeat-purchase analysis.
+- Added canonical ecommerce event/data schema and deterministic funnel calculations.
 
 - Added channel intelligence layer for channel performance, attribution, lead quality, budget allocation, and growth-channel strategy.
 - Added atomic acquisition metrics: CTR, CPC, CPL, CPQL, conversion rate, ROAS, revenue per lead, and gross profit per lead.
